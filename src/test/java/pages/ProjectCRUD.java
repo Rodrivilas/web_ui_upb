@@ -1,12 +1,10 @@
 package pages;
 
-import control.AlertControl;
+import control.WarningPopUp;
 import control.Button;
 import control.Label;
 import control.TextBox;
 import org.openqa.selenium.By;
-
-import java.util.Date;
 
 public class ProjectCRUD {
 
@@ -30,7 +28,7 @@ public class ProjectCRUD {
     //DELETE
     public Button projNameBoxUpdate = new Button(By.xpath("//li[last()]//td[text()='"+newNameProj+"']"));
     public Button deleteButton = new Button(By.id("ProjShareMenuDel"));
-    public AlertControl alertControl = new AlertControl();
+    public WarningPopUp warningPopUp = new WarningPopUp();
 
 
 }

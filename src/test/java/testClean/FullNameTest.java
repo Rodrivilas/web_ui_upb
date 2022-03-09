@@ -26,14 +26,14 @@ public class FullNameTest extends BaseTodoLy {
         Assertions.assertTrue(menuSection.logoutButton.isControlDisplayed(),"ERROR no se pudo hacer el login");
 
         //Actualizar el nombre
-        String newName= "Rotis risas";
+        String nombre= "Rotis risas";
         menuSection.settings.click();
         Thread.sleep(2000);
-        settingsPage.fullNameBox.clearSetText(newName);
+        settingsPage.fullNameBox.clearSetText(nombre);
         settingsPage.okButton.click();
         menuSection.settings.click();
         Thread.sleep(2000);
-        Assertions.assertEquals(settingsPage.fullNameBox.getTextAttributeControl("value"), newName,"ERROR no se modifico el nombre");
+        Assertions.assertEquals(settingsPage.fullNameBox.getTextAttributeControl("value"), nombre,"ERROR no se modifico el nombre");
     }
 
 
