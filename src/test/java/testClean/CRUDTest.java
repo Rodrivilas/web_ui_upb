@@ -24,28 +24,28 @@ public class CRUDTest extends BaseTodoLy   {
         Assertions.assertTrue(menuSection.logoutButton.isControlDisplayed(),"ERROR no se pudo hacer el login");
 
         projectCRUD.addNewProjectButton.click();
-        projectCRUD.nProjTxtBox.setText(projectCRUD.nameProj);
+        projectCRUD.newProjectTextBox.setText(projectCRUD.projectName);
         projectCRUD.saveNProject.click();
         Thread.sleep(2000);
-        Assertions.assertEquals(projectCRUD.nameProj, projectCRUD.projectLabel.getTextControl(),"ERROR no se hizo la creacion");
+        Assertions.assertEquals(projectCRUD.projectName, projectCRUD.projectLabel.getTextControl(),"ERROR no se hizo la creacion");
         Assertions.assertTrue(projectCRUD.actualProject.isControlDisplayed(),"ERROR no se hizo la creacion");
 
-        projectCRUD.projNameBox.click();
+        projectCRUD.projectNameBox.click();
         projectCRUD.optionsProjectButton.click();
         projectCRUD.updateProject.click();
-        projectCRUD.updateProjTxtBox.clearSetText(projectCRUD.newNameProj);
+        projectCRUD.updateProjectTextBox.clearSetText(projectCRUD.projectUpdateName);
         projectCRUD.saveUpdteButton.click();
         Thread.sleep(3000);
-        Assertions.assertEquals(projectCRUD.newNameProj, projectCRUD.projectLabel.getTextControl(),"ERROR no se hizo update");
+        Assertions.assertEquals(projectCRUD.projectUpdateName, projectCRUD.projectLabel.getTextControl(),"ERROR no se hizo update");
         Assertions.assertTrue(projectCRUD.actualProjectUpdate.isControlDisplayed(),"ERROR no se hizo update");
 
-        projectCRUD.projNameBoxUpdate.click();
+        projectCRUD.projectNameBoxUpdate.click();
         projectCRUD.optionsProjectButton.click();
         projectCRUD.deleteButton.click();
         Thread.sleep(3000);
         projectCRUD.warningPopUp.aceptarWarning();
         Thread.sleep(4000);
-        Assertions.assertTrue(!projectCRUD.projectLabel.getTextControl().equals(projectCRUD.newNameProj),"ERROR el projecto no se pudo eliminar");
+        Assertions.assertTrue(!projectCRUD.projectLabel.getTextControl().equals(projectCRUD.projectUpdateName),"ERROR el projecto no se pudo eliminar");
 
 
 
