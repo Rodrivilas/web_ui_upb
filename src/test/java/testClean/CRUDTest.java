@@ -15,7 +15,7 @@ public class CRUDTest extends BaseTodoLy   {
 
     @Test
     public void verifyLoginTodoLy() throws InterruptedException {
-        //login
+
         mainPage.loginImage.click();
         loginModal.emailTxtBox.setText("rodriviladegut@gmail.com");
         loginModal.pwdTxtBox.setText("12345");
