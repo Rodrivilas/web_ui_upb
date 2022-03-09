@@ -8,7 +8,7 @@ public class BasicSelenium {
     ChromeDriver chromeDriver;
     @BeforeEach
     public void openBrowser(){
-        System.setProperty("webdriver.chrome.driver","src/test/resources/driver/chromedriver");
+        System.setProperty("webdriver.chrome.driver","src/test/resources/driver/chromedriver.exe");
         chromeDriver = new ChromeDriver();
         chromeDriver.get("https://todo.ly/");
     }
